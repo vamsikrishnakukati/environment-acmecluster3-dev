@@ -1,22 +1,22 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  environmentGitPublic: false
+  clusterName: winterbourbon
+  environmentGitOwner: vamsikrishnakukati
+  environmentGitPublic: true
   project: ""
-  provider: gke
-  zone: ""
+  provider: eks
+  zone: us-west-2
 gitops: true
 environments:
 - key: dev
 - key: staging
 - key: production
 ingress:
-  domain: ""
-  externalDNS: false
+  domain: vamsishoppingcart.de
+  externalDNS: true
   tls:
-    email: ""
-    enabled: false
-    production: false
+    email: vamsikrisreddy.k@gmail.com
+    enabled: true
+    production: true
 kaniko: true
 secretStorage: local
 storage:
@@ -29,6 +29,11 @@ storage:
   repository:
     enabled: false
     url: ""
+vault:
+  aws:
+    autocreate: true
+    iamUserName: GitOps
+  disableUrlDiscovery: true
 versionStream:
   ref: "master"
   url: https://github.com/jenkins-x/jenkins-x-versions.git
